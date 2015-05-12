@@ -225,11 +225,10 @@ wp_reset_query();
 
 			
 			</hgroup>
-			
 			<div class="utilityMenu">
 			<?php wp_nav_menu( array( 'theme_location' => 'utility' ) ); ?>
 			</div>
-			
+
 			<nav id="access" class ="main-navigation" role="navigation">
 				<div class="site-navigation-container">
 				<!-- <a href="#" class="mobileNavTrigger">Navigation</a>
