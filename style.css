@@ -73,9 +73,15 @@ body {
 	padding: 0 2em;
 	
 }
+
+.sub-menu{
+	display:none;
+}
+
 #page {
 	margin: 0 auto;
 	/*width: 960px;*/
+	overflow:hidden;
 }
 
 #page.mobileOff {
@@ -3058,6 +3064,14 @@ footer .copyrightline {
 
 }
 @media (max-width: 650px) {
+
+	input#s {
+		display: none;
+	}
+
+	.searchBox input#s{
+		display: block !important;
+	}
 	/* @media (max-width: 650px) Reduce font-sizes for better readability on smaller devices */
 	body, input, textarea {
 		font-size: 13px;
@@ -3223,7 +3237,7 @@ footer .copyrightline {
 		display: none;
 	}
 	#access {
-		display: none;
+		/*display: none;*/
 	}
 	#main {
 		border-top: none;
@@ -4169,7 +4183,7 @@ color: #B70101;
 
 
 .collegeFeature, .collegeFeature2 {
-	width: 938px;
+	max-width: 938px;
 	margin: 0 auto;
 	height: 245px;
 	position: relative;
@@ -5584,7 +5598,7 @@ footer h4{
 
 footer .inner {
 	margin: 0 auto;
-	width: 963px;
+	max-width: 963px;
 	
 	padding-top: 10px;
 	padding-bottom: 130px;
@@ -6578,7 +6592,7 @@ border-radius: 3px;
 
 
 #access .mobileNavTrigger, #access .mobileSettingsTrigger, #access .mobileScrollTop {
-	display: none;
+	/*display: none;*/
 }
 
 #searchform .searchClear:link, #searchform .searchClear:visited {
@@ -6635,7 +6649,7 @@ border-radius: 3px;
 
 
 @media only screen and (min-width : 960px) {
-	
+
 }
 
 /*!
@@ -7686,7 +7700,7 @@ border-radius: 3px;
 
 
 /* Screen below native width of 960px ----------- */
-@media only screen and (min-width : 640px) and (max-width : 960px) {
+@media only screen and (min-width : 320px) and (max-width : 1000px) {
 	#primary {
 		width: 622px;
 		 
@@ -7694,17 +7708,20 @@ border-radius: 3px;
 	
 
 	.single #content, .page #content, .search-results #content, .archive #content, .error404 #content {
-		width: auto;
+		/*width: auto;*/
+		  width: 97%;
+  		  margin: 0 auto;	
+  		  float:none;
 	}
 	
 	#branding {
-		width: 646px;
+		width: 95%;
 		
 		
 	}
 	
 	#branding .heading {
-		width: 622px;
+		width: 100%;
 		
 		
 	}
@@ -7720,12 +7737,12 @@ border-radius: 3px;
 		
 	.collegeFeature, .collegeFeature2 {
 		
-		width: 622px;
+		width: 92.4%%;
 	
 	}
 	
 	#primary, .single #primary, .page #primary {
-		width: 622px;
+		width: 95%;
 		overflow: hidden;
 		 
 			}
@@ -7757,7 +7774,7 @@ border-radius: 3px;
 	}
 	
 	.collegeFeature, .collegeFeature li {
-		width: 622px;
+		width: 90%;
 	}
 	
 	
@@ -7768,7 +7785,7 @@ border-radius: 3px;
 	
 		
 	footer .inner {
-		width: 646px;
+		width: 90%;
 		 
 	}
 	
@@ -7782,34 +7799,36 @@ border-radius: 3px;
 
 
 /* Screen below 640px ----------- */
-@media only screen and (min-width : 320px) and (max-width : 640px) {
+/*@media only screen and (min-width : 320px) and (max-width : 640px) {
 	#primary {
-		width: 308px;
+		width: 70%;
 		 
 	}
 	
 	#branding {
-		width: 308px;
-		 
-		
+		width: 400px;
 		
 	}
 	
 	#branding .heading {
-		width: 308px;
+		width: 400px;
 		 
 		
 		
 	}
+
+	#access{
+
+	}
 	
 	#main #content {
-		width: 246px;
+		width: 400px;
 	}
 	
 		
 	.collegeFeature, .collegeFeature2 {
 		
-		width: 308px;
+		width: 400px;
 		 
 	}
 	
@@ -7823,24 +7842,24 @@ border-radius: 3px;
 	}
 	
 	#primary, .single #primary, .page #primary {
-		width: 308px;
+		width: 400px;
 		overflow: hidden;
 		 
 			}
 	
 		
 	footer .inner {
-		width: 308px;
+		width: 400px;
 		 
 	}
 	
 	.collegeFeature li {
-		width:308px;
+		width:400px;
 		 
 		
 	}
 
-}
+}*/
 
 
 /* Where iPad_css_styles were */
@@ -8007,3 +8026,157 @@ border-radius: 3px;
 
 /* Where Nexus_css_styles were*/
 
+/************
+* menuMobile
+*************/
+
+.mobileMenu {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 300px;
+	height: 100%;
+	z-index:99999;
+	background: #444444;
+	visibility: hidden;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	box-shadow: 0px 1px 25px rgba(0,0,0,0.4);
+	transform: translate(-300px,0px);
+	-webkit-transform: translate(-300px,0px);
+	transition: 0.4s cubic-bezier(0.150, 0.325, 0.250, 1.195);
+	-webkit-transition: 0.4s cubic-bezier(0.150, 0.325, 0.250, 1.195);
+	
+}
+
+.mobileMenu h2.mobileTitle {
+		display: block;
+		font-size: 14px;
+		font-weight: 100;
+		text-transform: uppercase;
+		letter-spacing: 0.8px;
+		color: rgba(255,255,255,0.25);
+		margin-bottom: 0.7em;
+		padding: 0.7em;
+		padding-left: 1.3em;
+		padding-right: 1.3em;
+		margin-top: 2em;
+	}
+
+.mobileMenu a {
+		display:block;
+		color: rgba(255,255,255,0.8);
+		font-family: "Roboto", sans-serif;
+		font-weight: 300;
+		letter-spacing: 0.6px;
+		font-size: 18px;
+		padding: 0.7em;
+		padding-left: 1.2em;
+		padding-right: 1.2em;
+		text-decoration: none;
+		/*border-bottom: 1px solid rgba(255,255,255,0.06);*/
+	}
+	
+.mobileMenu	a:hover {
+		background: rgba(255,255,255,0.15);
+	}
+
+.mobileMenu.mobileMenuShown {
+	transform: translate(0px,0px);
+	-webkit-transform: translate(0px,0px);
+	visibility: visible;
+}
+
+.menuOverlay {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	z-index:99998;
+	visibility: hidden;
+	opacity:0;
+	transition: 0.4s;
+	-webkit-transition: 0.4s;
+}
+
+.menuOverlay.mobileMenuShown {
+	visibility: visible;
+	opacity: 1;
+	background: rgba(61,61,61,0.7);
+}
+
+.site-header .logoImage.mobileMenuOn {
+	margin-left: 50px;
+}
+
+.logoImage.mobileMenuOn img {
+	max-height: 55px;
+	width: auto;
+}
+/* site menu bar */
+.site-navigation-container {
+			max-width: $content-width-max;
+			margin: 0 auto;
+			padding-left: 30px;
+			padding-right: 30px;
+			
+		}
+
+.site-navigation-containter li {
+				line-height: 1;
+			}
+.site-navigation-containter a {	
+					display: inline-block;
+					color: rgba(0,0,0,0.9);
+					font-family: "Roboto Condensed", sans-serif;
+					font-weight: 400;
+					font-size: 14px;
+					line-height: 1;
+					letter-spacing: 0.3px;
+					padding: 0.8em;
+					padding-left: 1.1em;
+					padding-right: 1.1em;
+					margin-top: 0px;
+					margin-bottom: 0px;
+					text-transform: uppercase;
+				}
+				
+.site-navigation-containter a:hover, a:focus {
+					background: $uwred;
+					color: rgba(255,255,255,0.8);
+				}
+
+.mobileTrigger {
+	
+	display: none;
+	width: 50px;
+	height: 40px;
+	
+	/*position: absolute;*/
+	top: 16px;
+	left: 16px;
+	z-index:5;
+	padding-right: 16px;
+	border-right: 1px solid rgba(255,255,255,0.3);	
+	
+}
+
+.searchBox{
+	margin: 1em;
+}
+
+.searchBox input#s {
+  background: transparent !important;
+  color: white !important;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  font-size: 14px;
+  height: 22px;
+  line-height: 1.2em;
+  padding: 3px !important;
+  width: 90% !important;
+  border: 1px rgb(166, 167, 169) solid !important;
+  display:none;
+}

@@ -103,8 +103,8 @@
   <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery-css-transform.js"></script>
   <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery-rotate.js"></script>
   <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/browserdetect.js"></script>
-   <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/mainactions.js"></script>
-
+  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/mainactions.js"></script>
+  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/global.js"></script>
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
@@ -132,10 +132,17 @@ $current_colorscheme = $options['link_color'];
 
 <body <?php body_class(); ?> id="<?php echo $current_colorscheme; ?>">
 
+
+<div class="mobileMenu">
+	<h2 class="mobileTitle">Menu</h2>
+		<div class="searchBox"><?php get_search_form(); ?></div>
+				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+</div>
+<div class="menuOverlay"></div>
 <div id="page" class="hfeed">
-	<header id="branding" role="banner">
-	
+	<header id="branding" role="banner">	
 			<hgroup class="heading">
+				<a href="#" class="mobileTrigger"><svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32; fill: #b7ab82;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg></a>	
 				<h1 id="site-title"><span><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span></h1>
 				<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
 
@@ -223,86 +230,21 @@ wp_reset_query();
 			<?php wp_nav_menu( array( 'theme_location' => 'utility' ) ); ?>
 			</div>
 			
-			<nav id="access" role="navigation">
-				<a href="#" class="mobileNavTrigger">Navigation</a>
+			<nav id="access" class ="main-navigation" role="navigation">
+				<div class="site-navigation-container">
+				<!-- <a href="#" class="mobileNavTrigger">Navigation</a>
 				<a href="#" class="mobileSettingsTrigger">Navigation</a>
-				<div class="mobileScrollTop"></div>
-				<div class="centerfix">
-				<a href="#" class="totop" title="Go to the top of the page">Go to the top of the page</a>
-				<h3 class="assistive-text"><?php _e( 'Main menu', 'twentyeleven' ); ?></h3>
-				<?php /* Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff. */ ?>
-				<div class="skip-link"><a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to primary content', 'twentyeleven' ); ?>"><?php _e( 'Skip to primary content', 'twentyeleven' ); ?></a></div>
-				<div class="skip-link"><a class="assistive-text" href="#secondary" title="<?php esc_attr_e( 'Skip to secondary content', 'twentyeleven' ); ?>"><?php _e( 'Skip to secondary content', 'twentyeleven' ); ?></a></div>
-				<?php /* Our navigation menu. If one isn't filled out, wp_nav_menu falls back to wp_page_menu. The menu assigned to the primary location is the one used. If one isn't assigned, the menu with the lowest ID is used. */ ?>
+				<div class="mobileScrollTop"></div> -->
+				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 				
-				
-				<!-- Commented out to hardcode the site's navigation -->
-				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-				<!--<div class="menu">
-					<ul>
-						<li class="page_item">
-							<a href="/find/">Find</a>
-							<ul class="children">
-								<li class="page_item"><a href="/articles/">Articles</a></li>
-								<li class="page_item"><a href="/books/">Books</a></li>
-								<li class="page_item"><a href="/databases/">Databases</a></li>
-								<li class="page_item"><a href="/journals/">Journals</a></li>
-							</ul>
-						</li>
-						<li class="page_item">
-							<a href="/services/">Services</a>
-							<ul class="children">
-								<li class="page_item"><a href="/using-the-library/">Using the Library</a></li>
-							</ul>
-						</li>
-						<li class="page_item">
-							<a href="#">Research</a>
-							<ul class="children">
-								<li class="page_item"><a href="#">E-Books</a></li>
-							</ul>
-						</li>
-						<li class="page_item">
-							<a href="#">Libraries</a>
-							<ul class="children">
-								<li class="page_item"><a href="#">Steenbock</a></li>
-							</ul>
-						</li>
-						<li class="page_item">
-							<a href="#">About</a>
-							<ul class="children">
-								<li class="page_item"><a href="#">Hours</a></li>
-							</ul>
-						</li>
-						<li class="page_item">
-							<a href="#">Help</a>
-							<ul class="children">
-								<li class="page_item"><a href="#">Steenbock</a></li>
-							</ul>
-						</li>
-						<li class="page_item user_account">
-							<a href="#">Hi Jane Smith!</a>
-						</li>
-					</ul>
-				</div>-->
-				
-				
-				<!-- The markup of the navigation if it is hard coded -->
-				<!--<ul class="clearfix">
-			  		<li><a href="#">Students</a></li>
-			  		<li><a href="#">Alumni</a></li>
-			  		<li><a href="#">Faculty &amp; Staff</a></li>
-			  		<li><a href="#">Industry &amp; Community</a></li>
-			  		<li><a href="#">Research</a></li>
-			  		<li><a href="#">Outreach</a></li>
-  				</ul>-->
-				</div>
-				
+			</div>	
 			</nav><!-- #access -->
 			
 			<div class="navcornerleft"></div>
 			<div class="navcornerright"></div>
 <div class="headingbg clearfix"></div>
 	</header><!-- #branding -->
+<!--<div class="searchBox"><?php get_search_form(); ?></div>-->
 
 <div id="mobile-menu">
 	<div id="mobile-menu-inner">
