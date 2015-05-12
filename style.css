@@ -7798,9 +7798,26 @@ border-radius: 3px;
 }
 
 
-/* Screen below 640px ----------- */
-/*@media only screen and (min-width : 320px) and (max-width : 640px) {
-	#primary {
+/* Screen below 655px ----------- */
+@media only screen and (min-width : 320px) and (max-width : 655px) {
+
+	.newsItem {
+		width:95%;
+	}
+
+	.newsItem a .text, .newsItem .previousa .text {
+		width:190%;
+	}
+	
+	.newsItem .previousa .highlight {
+		width:190%;
+
+	}
+
+	.newsItem .previousa .highlight:hover{
+		width:200%;
+	}
+	/*#primary {
 		width: 70%;
 		 
 	}
@@ -7857,9 +7874,9 @@ border-radius: 3px;
 		width:400px;
 		 
 		
-	}
+	}*/
 
-}*/
+}
 
 
 /* Where iPad_css_styles were */
