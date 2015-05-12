@@ -7817,6 +7817,16 @@ border-radius: 3px;
 	.newsItem .previousa .highlight:hover{
 		width:200%;
 	}
+
+	.aboutCALSMission .inner p:first-child {
+  		font-size: 13px;
+  		width: 70%;
+ 		margin: -14px;
+	}
+
+	a.button{
+		margin: 2em;
+	}
 	/*#primary {
 		width: 70%;
 		 
