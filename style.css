@@ -5606,7 +5606,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 footer#colophon {
 
 	color: #c6c6c6;
-	 font-size: 11px;
+	font-size: 11px;
 
 }
 
@@ -5624,7 +5624,6 @@ footer h4{
 footer .inner {
 	margin: 0 auto;
 	max-width: 963px;
-	
 	padding-top: 10px;
 	padding-bottom: 130px;
 	background: #464646;
@@ -7810,7 +7809,7 @@ border-radius: 3px;
 	
 		
 	footer .inner {
-		width: 90%;
+		width: 97.6% ;
 		 
 	}
 	
@@ -7922,7 +7921,7 @@ border-radius: 3px;
 
 
 
-.sliderContainer {
+/*.sliderContainer {
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -8074,7 +8073,7 @@ border-radius: 3px;
 		font: 12px/18px "Helvetica Neue",Helvetica,Arial,sans-serif;
 	}
 	
-}
+}*/
 
 /* Where Nexus_css_styles were*/
 
@@ -8119,8 +8118,8 @@ border-radius: 3px;
 .mobileMenu a {
 		display:block;
 		color: rgba(255,255,255,0.8);
-		font-family: "Roboto", sans-serif;
-		font-weight: 300;
+		/*font-family: "Roboto", sans-serif;*/
+		font-weight: 100;
 		letter-spacing: 0.6px;
 		font-size: 18px;
 		padding: 0.7em;
@@ -8182,8 +8181,8 @@ border-radius: 3px;
 .site-navigation-containter a {	
 					display: inline-block;
 					color: rgba(0,0,0,0.9);
-					font-family: "Roboto Condensed", sans-serif;
-					font-weight: 400;
+					/*font-family: "Roboto Condensed", sans-serif;*/
+					font-weight: 100;
 					font-size: 14px;
 					line-height: 1;
 					letter-spacing: 0.3px;
@@ -8224,11 +8223,12 @@ border-radius: 3px;
   color: white !important;
   -moz-border-radius: 2px;
   border-radius: 2px;
-  font-size: 14px;
-  height: 22px;
+  font-size: 27px;
+  font-weight: 100;
+  height: 30px;
   line-height: 1.2em;
   padding: 3px !important;
-  width: 90% !important;
+  width: 94% !important;
   border: 1px rgb(166, 167, 169) solid !important;
-  display:none;
+  display: none;
 }
