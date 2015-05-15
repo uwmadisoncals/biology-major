@@ -137,7 +137,7 @@ $current_colorscheme = $options['link_color'];
 	<div class="searchBox"><?php get_search_form(); ?></div>
 
 	<h2 class="mobileTitle">Menu</h2>
-	<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+	<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 </div>
 <div class="menuOverlay"></div>
 <div id="page" class="hfeed">

@@ -74,6 +74,10 @@ body {
 	
 }
 
+.menu-item{
+	display:block;
+}
+
 .sub-menu{
 	display:none;
 }
@@ -620,7 +624,8 @@ a.button:active {
 ----------------------------------------------- */
 
 #branding {
-	width: 963px;
+	max-width: 963px;
+	width: 95%;
 	margin: 0 auto;
 	padding-bottom: 0px;
 	
@@ -734,6 +739,9 @@ a.button:active {
 	float: left;
 	margin: 0 auto -1px;
 	width: 100%;
+	/*fixes loading glitch of access bar appearing*/
+	visibility:hidden;
+	position:absolute;
 }
 
 #uwred #access {
@@ -7851,6 +7859,7 @@ border-radius: 3px;
 	a.button{
 		margin: 2em;
 	}
+
 	/*#primary {
 		width: 70%;
 		 
@@ -8138,7 +8147,9 @@ border-radius: 3px;
 	-webkit-transform: translate(0px,0px);
 	visibility: visible;
 }
-
+.mobileMenu .menu-item-has-children{
+	background:rgba(255,255,255,0.15);;
+}
 .menuOverlay {
 	position: fixed;
 	top: 0px;
@@ -8179,7 +8190,7 @@ border-radius: 3px;
 				line-height: 1;
 			}
 .site-navigation-containter a {	
-					display: inline-block;
+					display: bl;
 					color: rgba(0,0,0,0.9);
 					/*font-family: "Roboto Condensed", sans-serif;*/
 					font-weight: 100;
@@ -8231,4 +8242,27 @@ border-radius: 3px;
   width: 94% !important;
   border: 1px rgb(166, 167, 169) solid !important;
   display: none;
+}
+
+
+.subLevel1{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 300px;
+  background: #444444;
+  transform: translate(-300px,0);
+  transition: .4s cubic-bezier(.15,.325,.25,1.195);
+  -webkit-transition: .4s cubic-bezier(.15,.325,.25,1.195);
+  visibility: visible;
+  
+}
+.subLevel1.visible {
+  transform: translate(0,0);
+  -webkit-transform: translate(0,0);
+}
+.backLevel1{
+
+}
 }
