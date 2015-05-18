@@ -8148,8 +8148,14 @@ border-radius: 3px;
 	visibility: visible;
 }
 .mobileMenu .menu-item-has-children{
-	background:rgba(255,255,255,0.15);;
-}
+	/*background:rgba(255,255,255,0.15);
+	background-position: 90% center;
+	background-size: auto 50%;*/
+	background: url(images/rightArrow.svg) no-repeat;
+	background-position: 90% center;
+	background-size: auto 50%;	
+	}
+
 .menuOverlay {
 	position: fixed;
 	top: 0px;
@@ -8262,7 +8268,13 @@ border-radius: 3px;
   transform: translate(0,0);
   -webkit-transform: translate(0,0);
 }
-.backLevel1{
-
+.backLevel1 {
+  text-transform: uppercase;
+  font-size:15px !important;
+  background: url(images/leftArrow.svg) no-repeat;
+  padding-left: 2.5em !important;
+  background-size: auto 50%;	
+  background-position-y: 60%;
+  background-position-x: 4%;
 }
 }
