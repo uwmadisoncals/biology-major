@@ -1,22 +1,4 @@
 jQuery (document ).ready(function($){
-	
-	
-/**
- * ----------------------------------------------------------------------------
- *
- *  Hide Menus When clicking elsewhere
- *
- * ----------------------------------------------------------------------------
- */
-
-/*$(window).click(function(e) {
-	
-	
-	//close your uw menu
-	$(".youruwmenu").removeClass("visible");
-	
-});*/
-
 
 
 /**
@@ -33,8 +15,8 @@ jQuery (document ).ready(function($){
  $(".site-navigation-container .menu-menu-1-container > ul > li").each(function() {
 		totalWidth = totalWidth  + $(this).width();
  });
- 
-  
+
+
  function mobileMenu() {
 	  var windowWidth = $(window).width();
 	  var menuWidth = $(".site-navigation-container .menu-menu-1-container").width();
@@ -54,6 +36,7 @@ jQuery (document ).ready(function($){
 		$(".mobileTrigger").show();
 		$(".logoImage").addClass("mobileMenuOn");
 		$("#access").css("visibility","hidden").css("position", "absolute");
+		subMobileMenu();
 	 } else {
 	 
 		 if(totalWidth > menuWidth) {
@@ -67,6 +50,7 @@ jQuery (document ).ready(function($){
 			 $(".mobileTrigger").show();
 			 $(".logoImage").addClass("mobileMenuOn");
 			 $("#access").css("visibility","hidden").css("position", "absolute");
+			 subMobileMenu();
 		 } else {
 			 if(totalWidth == 0) {
 				 //console.log("switch to mobile");
@@ -79,6 +63,7 @@ jQuery (document ).ready(function($){
 				 $(".mobileTrigger").show();
 				 $(".logoImage").addClass("mobileMenuOn");
 				 $("#access").css("visibility","hidden").css("position", "absolute");
+				 subMobileMenu();
 			 } else {
 				 //console.log("switch to full");		
 				 $(".navcornerleft").css("visibility","visible");
@@ -113,23 +98,6 @@ $(".mobileTrigger, .menuOverlay").click(function(e) {
 	$("#page").toggleClass("blur");
 }); 
 
-
-
-/**
- * ----------------------------------------------------------------------------
- *
- *  Setup Hero Image Carousel for Home Page
- *
- * ----------------------------------------------------------------------------
- */
- 
-	// $(".owl-carousel").owlCarousel({
-	// 	items: 1,
-	// 	nav:true,
-	// 	loop: true,
-	// 	dots: true
-	// });
-	
 	
 /**
  * ----------------------------------------------------------------------------
@@ -157,64 +125,7 @@ $(".mobileTrigger, .menuOverlay").click(function(e) {
 	});
 
  
-/**
- * ----------------------------------------------------------------------------
- *
- *  Default Page Height
- *
- * ----------------------------------------------------------------------------
- */
- 	function setPageHeight(){
-	 	var wH = $(window).height();
-		var fH = $("footer").height();
-		var hH = $("header").height();
-	 
-	 	$(".site-main").css("min-height",wH-(hH));
-	 }
-	 
-	 //call once on pageload
-	 setPageHeight();
-	 
-	 $( window ).resize(function() {
-	 	setPageHeight();
-	 });
-	 
-	 
-	 
-/**
- * ----------------------------------------------------------------------------
- *
- *  Spotlight image resizing
- *
- * ----------------------------------------------------------------------------
- */
-	$('.box').each(function() {
-	    //set size
-	    var th = $(this).height(),//box height
-	        tw = $(this).width(),//box width
-	        im = $(this).children('img'),//image
-	        ih = im.height(),//inital image height
-	        iw = im.width();//initial image width
-	    if (ih>iw) {//if portrait
-		    
-	        im.addClass('ww').removeClass('wh');//set width 100%
-	    } else {//if landscape
-		    
-	        im.addClass('wh').removeClass('ww');//set height 100%
-	    }
-	    //set offset
-	    var nh = im.height(),//new image height
-	        nw = im.width(),//new image width
-	        hd = (nh-th)/2,//half dif img/box height
-	        wd = (nw-tw)/2;//half dif img/box width
-	    if (nh<nw) {//if portrait
-		    
-	        im.css({marginLeft: '-'+wd+'px', marginTop: 0});//offset left
-	    } else {//if landscape
-		    
-	        im.css({marginTop: '-'+hd+'px', marginLeft: 0});//offset top
-	    }
-	});
+
 /**
  * ----------------------------------------------------------------------------
  *
@@ -264,19 +175,10 @@ function subMobileMenu(){
 			},300);
 
 		});
-
- 		//$(elem).css("background","red");
- 		//alert("test");
  	}
-
 	});
 
- 	// if ($('.menu-item').hasClass('menu-item-has-children')){
- 	// 	$('.mobileMenu .sub-menu').css("display","none");
- 	// }
-
-
  }
-subMobileMenu();
+//subMobileMenu();
 
 });
