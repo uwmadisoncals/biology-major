@@ -641,6 +641,8 @@ a.button:active {
 	width: 13px;
 	height: 13px;
 	background: url("images/navcorner_left.png") no-repeat;
+	/* hides when page is loaded */
+	visibility:hidden;
 }
 
 #branding .navcornerright {
@@ -651,6 +653,8 @@ a.button:active {
 	width: 13px;
 	height: 13px;
 	background: url("images/navcorner_right.png") no-repeat;
+	/* hides when page is loaded */
+	visibility:hidden;
 }
 
 #uwred #branding {
@@ -8099,8 +8103,8 @@ border-radius: 3px;
 	z-index:99999;
 	background: #444444;
 	visibility: hidden;
-	overflow-x: hidden;
-	overflow-y: scroll;
+	/*overflow-x: hidden;
+	overflow-y: scroll;*/
 	-webkit-overflow-scrolling: touch;
 	box-shadow: 0px 1px 25px rgba(0,0,0,0.4);
 	transform: translate(-300px,0px);
@@ -8137,6 +8141,10 @@ border-radius: 3px;
 		text-decoration: none;
 		/*border-bottom: 1px solid rgba(255,255,255,0.06);*/
 	}
+
+.mobileMenu ul{
+	margin: 0 !important;
+}
 	
 .mobileMenu	a:hover {
 		background: rgba(255,255,255,0.15);
@@ -8227,7 +8235,7 @@ border-radius: 3px;
 	left: 16px;
 	z-index:5;
 	padding-right: 16px;
-	border-right: 1px solid rgba(255,255,255,0.3);	
+	border-right: 1px solid rgba(255,255,255,0.3);		
 	
 }
 
