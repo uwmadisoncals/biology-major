@@ -69,7 +69,8 @@ jQuery (document ).ready(function($){
 				 $(".navcornerleft").css("visibility","visible");
 				 $(".navcornerright").css("visibility","visible");
 				 $(".collegeFeature, .collegeFeature2").css("width","92.4%");
-				 $("footer .inner").css("width","97.6%");
+				 $("footer .inner").css("width","95%");
+				 $(".blog .inner").css("width","97.6%");
 				 //$("#page").css("margin-top", "0");
 				 $(".collegeFeature2").css("margin-top","0");
 				 $("#main").css("margin-top", "0");
