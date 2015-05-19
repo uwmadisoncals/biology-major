@@ -8282,7 +8282,6 @@ border-radius: 3px;
   background: url(images/leftArrow.svg) no-repeat;
   padding-left: 2.5em !important;
   background-size: auto 50%;	
-  background-position-y: 60%;
-  background-position-x: 4%;
+  background-position: 3%
 }
 }
