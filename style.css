@@ -8266,9 +8266,11 @@ border-radius: 3px;
   height: 100%;
   width: 300px;
   background: #444444;
-  transform: translate(-300px,0);
-  transition: .4s cubic-bezier(.15,.325,.25,1.195);
-  -webkit-transition: .4s cubic-bezier(.15,.325,.25,1.195);
+  -webkit-overflow-scrolling: touch;
+  transform: translate(-300px,0px);
+  -webkit-transform: translate(-300px,0px);
+  transition: 0.4s cubic-bezier(0.150, 0.325, 0.250, 1.195);
+  -webkit-transition: 0.4s cubic-bezier(0.150, 0.325, 0.250, 1.195);
   visibility: visible;
   
 }
