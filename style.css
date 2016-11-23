@@ -8224,6 +8224,12 @@ border-radius: 3px;
 					color: rgba(255,255,255,0.8);
 				}
 
+div.entry-content a:focus {
+	color: #a60f0f;	
+	
+}
+
+
 .mobileTrigger {
 	
 	display: none;
