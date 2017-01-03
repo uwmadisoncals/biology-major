@@ -2563,6 +2563,23 @@ ul.features li.debitCard{
 	height: 20px;
 }
 
+/* Special: Stylings for 'Accordion Shortcodes' Plugin */ 
+
+.accordion.bm-accordion {
+    border-bottom: 1px solid #dbdbdb;
+    margin-bottom: 20px;
+}
+.accordion-title.bm-accordion {
+    border-top: 1px solid #dbdbdb;
+    margin: 0;
+    cursor: pointer;
+    font-weight: bold;
+    font-family:"Open Sans", Helvetica, sans-serif;
+}
+.accordion-title.bm-accordion:hover {}
+.accordion-title.bm-accordion:first-child {border: none;}
+.accordion-title.open.bm-accordion {cursor: default;}
+.accordion-content.bm-accordion {padding-bottom: 20px;}
 
 /* =Comments
 ----------------------------------------------- */
